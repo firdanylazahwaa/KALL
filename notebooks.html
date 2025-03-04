@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -424,20 +426,21 @@ document.write(`
 <section id="satu-solusi-unik">
 <h2><strong>1. Satu Solusi Unik</strong><a class="headerlink" href="#satu-solusi-unik" title="Link to this heading">#</a></h2>
 <p>Misalkan sistem:<br />
-\begin{aligned}<br />
-x + y + z &amp;= 6  \<br />
-2x + y + 3z &amp;= 14 \<br />
-3x + 4y + z &amp;= 20<br />
-\end{aligned}</p>
+$<span class="math notranslate nohighlight">\(\begin{aligned}  
+x + y + z &amp;= 6  \\  
+2x + y + 3z &amp;= 14 \\  
+3x + 4y + z &amp;= 20  
+\end{aligned}\)</span>$</p>
 <section id="langkah-eliminasi-gauss">
 <h3><strong>Langkah Eliminasi Gauss</strong><a class="headerlink" href="#langkah-eliminasi-gauss" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p><strong>Bentuk matriks augmented:</strong></p>
-<p>\begin{bmatrix}<br />
-1 &amp; 1 &amp; 1 &amp; | 6 \<br />
-2 &amp; 1 &amp; 3 &amp; | 14 \<br />
-3 &amp; 4 &amp; 1 &amp; | 20<br />
-\end{bmatrix}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}  
+   1 &amp; 1 &amp; 1 &amp; | 6 \\  
+   2 &amp; 1 &amp; 3 &amp; | 14 \\  
+   3 &amp; 4 &amp; 1 &amp; | 20  
+   \end{bmatrix}\end{split}\]</div>
 </li>
 <li><p><strong>Eliminasi elemen di bawah elemen pertama:</strong></p>
 <ul class="simple">
@@ -445,25 +448,28 @@ x + y + z &amp;= 6  \<br />
 <li><p><strong>Baris 3</strong> dikurangi <strong>3 kali Baris 1</strong></p></li>
 </ul>
 <p>Hasil:</p>
-<p>\begin{bmatrix}<br />
-1 &amp; 1 &amp; 1 &amp; | 6 \<br />
-0 &amp; -1 &amp; 1 &amp; | 2 \<br />
-0 &amp; 1 &amp; -2 &amp; | 2<br />
-\end{bmatrix}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}  
+   1 &amp; 1 &amp; 1 &amp; | 6 \\  
+   0 &amp; -1 &amp; 1 &amp; | 2 \\  
+   0 &amp; 1 &amp; -2 &amp; | 2  
+   \end{bmatrix}\end{split}\]</div>
 </li>
 <li><p><strong>Agar tidak ada angka negatif, tukar baris 2 dan baris 3:</strong></p>
-<p>\begin{bmatrix}<br />
-1 &amp; 1 &amp; 1 &amp; | 6 \<br />
-0 &amp; 1 &amp; -2 &amp; | 2 \<br />
-0 &amp; -1 &amp; 1 &amp; | 2<br />
-\end{bmatrix}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}  
+   1 &amp; 1 &amp; 1 &amp; | 6 \\  
+   0 &amp; 1 &amp; -2 &amp; | 2 \\  
+   0 &amp; -1 &amp; 1 &amp; | 2  
+   \end{bmatrix}\end{split}\]</div>
 </li>
 <li><p><strong>Hilangkan angka negatif di Baris 3 dengan menambahkan Baris 2:</strong></p>
-<p>\begin{bmatrix}<br />
-1 &amp; 1 &amp; 1 &amp; | 6 \<br />
-0 &amp; 1 &amp; -2 &amp; | 2 \<br />
-0 &amp; 0 &amp; -1 &amp; | 4<br />
-\end{bmatrix}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}  
+   1 &amp; 1 &amp; 1 &amp; | 6 \\  
+   0 &amp; 1 &amp; -2 &amp; | 2 \\  
+   0 &amp; 0 &amp; -1 &amp; | 4  
+   \end{bmatrix}\end{split}\]</div>
 </li>
 <li><p><strong>Substitusi mundur:</strong></p>
 <ul class="simple">
@@ -474,27 +480,31 @@ x + y + z &amp;= 6  \<br />
 <p><strong>Solusi akhir:</strong><br />
 x = 8,       y = 10,          z = 4</p>
 </li>
+<li><p><strong>gambar geogebra</strong></p>
+ <iframe scrolling="no" title="satu solusi" src="https://www.geogebra.org/material/iframe/id/jfeduthw/width/1280/height/537/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1280px" height="537px" style="border:0px;"> </iframe>
+</li>
 </ol>
 </section>
 </section>
-<hr class="docutils" />
 <section id="tak-hingga-solusi">
 <h2><strong>2. Tak Hingga Solusi</strong><a class="headerlink" href="#tak-hingga-solusi" title="Link to this heading">#</a></h2>
 <p>Misalkan sistem:</p>
-<p>\begin{aligned}<br />
-x + y + z &amp;= 6  \<br />
-2x + 2y + 2z &amp;= 12 \<br />
-3x + 3y + 3z &amp;= 18<br />
-\end{aligned}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}  
+x + y + z &amp;= 6  \\  
+2x + 2y + 2z &amp;= 12 \\  
+3x + 3y + 3z &amp;= 18  
+\end{aligned}\end{split}\]</div>
 <section id="id1">
 <h3><strong>Langkah Eliminasi Gauss</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p><strong>Bentuk matriks augmented:</strong></p>
-<p>\begin{bmatrix}<br />
-1 &amp; 1 &amp; 1 &amp; | 6 \<br />
-2 &amp; 2 &amp; 2 &amp; | 12 \<br />
-3 &amp; 3 &amp; 3 &amp; | 18<br />
-\end{bmatrix}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}  
+   1 &amp; 1 &amp; 1 &amp; | 6 \\  
+   2 &amp; 2 &amp; 2 &amp; | 12 \\  
+   3 &amp; 3 &amp; 3 &amp; | 18  
+   \end{bmatrix}\end{split}\]</div>
 </li>
 <li><p><strong>Eliminasi baris kedua dan ketiga dengan mengurangkan kelipatan baris pertama:</strong></p>
 <ul class="simple">
@@ -502,21 +512,19 @@ x + y + z &amp;= 6  \<br />
 <li><p><strong>Baris 3 dikurangi 3 kali Baris 1</strong></p></li>
 </ul>
 <p>Hasil:</p>
-<p>\begin{bmatrix}<br />
-1 &amp; 1 &amp; 1 &amp; | 6 \<br />
-0 &amp; 0 &amp; 0 &amp; | 0 \<br />
-0 &amp; 0 &amp; 0 &amp; | 0<br />
-\end{bmatrix}</p>
-</li>
-<li><p><strong>Analisis hasil:</strong></p>
-<ul class="simple">
-<li><p>Baris terakhir bernilai ( 0 = 0 ), artinya tidak ada kontradiksi.</p></li>
-<li><p>Hanya satu persamaan dengan tiga variabel → <strong>banyak solusi</strong>.</p></li>
-</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}  
+   1 &amp; 1 &amp; 1 &amp; | 6 \\  
+   0 &amp; 0 &amp; 0 &amp; | 0 \\  
+   0 &amp; 0 &amp; 0 &amp; | 0  
+   \end{bmatrix}\end{split}\]</div>
 </li>
 <li><p><strong>Tuliskan solusi dalam bentuk parametrik:</strong></p>
 <p>x = 6 - y - z</p>
 <p>Dengan ( y ) dan ( z ) sebagai variabel bebas.</p>
+</li>
+<li><p><strong>gambar geogebra</strong></p>
+ <iframe scrolling="no" title="tak hingga" src="https://www.geogebra.org/material/iframe/id/nsbqsmkj/width/1280/height/537/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1280px" height="537px" style="border:0px;"> </iframe>
 </li>
 </ol>
 </section>
@@ -524,20 +532,22 @@ x + y + z &amp;= 6  \<br />
 <section id="tanpa-solusi">
 <h2><strong>3. Tanpa Solusi</strong><a class="headerlink" href="#tanpa-solusi" title="Link to this heading">#</a></h2>
 <p>Misalkan sistem:</p>
-<p>\begin{aligned}<br />
-x + y + z &amp;= 4 \<br />
-2x + 2y + 2z &amp;= 12 \<br />
-2x + 2y + 2z &amp;= 15<br />
-\end{aligned}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}  
+x + y + z &amp;= 4 \\  
+2x + 2y + 2z &amp;= 12 \\  
+2x + 2y + 2z &amp;= 15  
+\end{aligned}\end{split}\]</div>
 <section id="id2">
 <h3><strong>Langkah Eliminasi Gauss</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <ol class="arabic">
 <li><p><strong>Bentuk matriks augmented:</strong></p>
-<p>\begin{bmatrix}<br />
-1 &amp; 1 &amp; 1 &amp; | 4 \<br />
-2 &amp; 2 &amp; 2 &amp; | 12 \<br />
-2 &amp; 2 &amp; 2 &amp; | 15<br />
-\end{bmatrix}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}  
+   1 &amp; 1 &amp; 1 &amp; | 4 \\  
+   2 &amp; 2 &amp; 2 &amp; | 12 \\  
+   2 &amp; 2 &amp; 2 &amp; | 15  
+   \end{bmatrix}\end{split}\]</div>
 </li>
 <li><p><strong>Eliminasi baris kedua dan ketiga menggunakan baris pertama:</strong></p>
 <ul class="simple">
@@ -545,11 +555,12 @@ x + y + z &amp;= 4 \<br />
 <li><p><strong>Baris 3 dikurangi 2 kali Baris 1</strong></p></li>
 </ul>
 <p>Hasilnya:</p>
-<p>\begin{bmatrix}<br />
-1 &amp; 1 &amp; 1 &amp; | 4 \<br />
-0 &amp; 0 &amp; 0 &amp; | 4 \<br />
-0 &amp; 0 &amp; 0 &amp; | 7<br />
-\end{bmatrix}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}  
+   1 &amp; 1 &amp; 1 &amp; | 4 \\  
+   0 &amp; 0 &amp; 0 &amp; | 4 \\  
+   0 &amp; 0 &amp; 0 &amp; | 7  
+   \end{bmatrix}\end{split}\]</div>
 </li>
 <li><p><strong>Analisis hasil:</strong></p>
 <ul class="simple">
@@ -558,10 +569,10 @@ x + y + z &amp;= 4 \<br />
 <li><p><strong>Artinya, sistem ini tidak memiliki solusi!</strong></p></li>
 </ul>
 </li>
+<li><p><strong>gambar geogebra</strong></p>
+ <iframe scrolling="no" title="tanpa solusi" src="https://www.geogebra.org/material/iframe/id/yn8r3etp/width/1280/height/537/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1280px" height="537px" style="border:0px;"> </iframe>
+</li>
 </ol>
-<p>-satu solusi (unik):<a class="reference external" href="https://www.geogebra.org/m/jfeduthw">https://www.geogebra.org/m/jfeduthw</a>
--tak hingga solusi :<a class="reference external" href="https://www.geogebra.org/m/nsbqsmkj">https://www.geogebra.org/m/nsbqsmkj</a>
--tanpa solusi      :<a class="reference external" href="https://www.geogebra.org/m/yn8r3etp">https://www.geogebra.org/m/yn8r3etp</a></p>
 </section>
 </section>
 </section>
