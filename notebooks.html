@@ -183,6 +183,7 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">SISTEM PERSAMAAN LINIER</a></li>
+
 </ul>
 
     </div>
@@ -378,6 +379,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SISTEM PERSAMAAN LINIER</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-gauss">Sistem Persamaan Gauss</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satu-solusi-unik"><strong>1. Satu Solusi Unik</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-eliminasi-gauss"><strong>Langkah Eliminasi Gauss</strong></a></li>
@@ -392,6 +394,10 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-persamaan-menjadi-matriks-invers">Menghitung persamaan menjadi matriks invers</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -576,6 +582,92 @@ x + y + z &amp;= 4 \\
 </section>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="menghitung-persamaan-menjadi-matriks-invers">
+<h1>Menghitung persamaan menjadi matriks invers<a class="headerlink" href="#menghitung-persamaan-menjadi-matriks-invers" title="Link to this heading">#</a></h1>
+<p>Contoh Sistem Persamaan Linear 3 Variabel dan Pembuktian</p>
+<p><span class="math notranslate nohighlight">\(A^{-1}b = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\)</span></p>
+<ol class="arabic simple">
+<li><p>Bentuk Umum Persamaan
+Sistem persamaan linear 3 variabel dapat ditulis dalam bentuk matriks:
+$<span class="math notranslate nohighlight">\(A \cdot x = b\)</span>$</p></li>
+</ol>
+<p>Di mana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span> adalah matriks koefisien berukuran <span class="math notranslate nohighlight">\(3 \times 3\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(x\)</span> adalah vektor variabel <span class="math notranslate nohighlight">\(\begin{bmatrix} x \\ y \\ z \end{bmatrix}^T\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(b\)</span> adalah vektor konstanta.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Tujuan</p></li>
+</ol>
+<p>Kita ingin membuktikan bahwa:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A^{-1} \cdot b = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\end{split}\]</div>
+<p>Artinya, jika kita mengalikan <span class="math notranslate nohighlight">\(b\)</span> dengan invers dari <span class="math notranslate nohighlight">\(A\)</span>, maka hasilnya adalah vektor tersebut.</p>
+<ol class="arabic simple" start="3">
+<li><p>Langkah Penyelesaian.</p></li>
+</ol>
+<p>a. Tentukan Matriks A
+Kita pilih matriks 𝐴 yang tidak memiliki baris/kolom yang sama agar determinannya tidak nol (agar bisa dicari inversnya):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+2 &amp; -1 &amp; 3 \\
+4 &amp; 2 &amp; 1 \\
+1 &amp; 0 &amp; 5
+\end{bmatrix}
+\end{split}\]</div>
+<p>b. Tentukan vektor b</p>
+<p>Dari teori matriks, jika:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} \cdot b = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Maka berlaku juga:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+b = A \cdot \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Artinya, <strong>b adalah kolom pertama dari A</strong>.</p>
+<p>Sehingga:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+b = \begin{bmatrix} 2 \\ 4 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<ol class="arabic simple" start="4">
+<li><p>Interpretasi Persamaan</p></li>
+</ol>
+<p>Jika diubah ke bentuk sistem persamaan linear:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+2x - y + 3z = 2 \\
+4x + 2y + z = 4 \\
+x + 5z = 1
+\end{cases}
+\end{split}\]</div>
+<ol class="arabic simple" start="5">
+<li><p>Pembuktian</p></li>
+</ol>
+<p>Tanpa menghitung <span class="math notranslate nohighlight">\(A^{-1}\)</span> secara manual, kita tahu <strong>b adalah kolom pertama dari A</strong>. Dalam aljabar linear:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} \cdot (\text{kolom ke-1 dari } A) = \text{vektor kanonik ke-1} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Jadi, <strong>pasti benar</strong> bahwa:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} \cdot b = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<ol class="arabic simple" start="6">
+<li><p>Kesimpulan</p></li>
+</ol>
+<p>Sistem persamaan yang kita buat memenuhi syarat. Kita berhasil membuktikan bahwa:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^{-1} b = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -641,6 +733,7 @@ x + y + z &amp;= 4 \\
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SISTEM PERSAMAAN LINIER</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-gauss">Sistem Persamaan Gauss</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satu-solusi-unik"><strong>1. Satu Solusi Unik</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-eliminasi-gauss"><strong>Langkah Eliminasi Gauss</strong></a></li>
@@ -655,6 +748,10 @@ x + y + z &amp;= 4 \\
 </ul>
 </li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-persamaan-menjadi-matriks-invers">Menghitung persamaan menjadi matriks invers</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>
