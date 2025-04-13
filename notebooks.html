@@ -185,6 +185,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">SISTEM PERSAMAAN LINIER</a></li>
 
 
+
 </ul>
 
     </div>
@@ -397,7 +398,11 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#devinisi-matriks-invers">Devinisi matriks invers</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-menghitung-invers-matriks">Tugas menghitung invers matriks</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-menghitung-invers-matriks">Tugas menghitung invers matriks</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-materi-uts"><em>RINGKASAN MATERI UTS</em></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-dan-jawaban">SOAL DAN JAWABAN</a></li>
 </ul>
 
             </nav>
@@ -641,6 +646,331 @@ x + y + z &amp;= 4 \\
 <p>Kesimpulan:</p>
 <p>Solusi dari sistem persamaan ini adalah:
 <span class="math notranslate nohighlight">\( x_1 = 1, \quad x_2 = 0, \quad x_3 = 0 \)</span></p>
+<section id="ringkasan-materi-uts">
+<h2><em>RINGKASAN MATERI UTS</em><a class="headerlink" href="#ringkasan-materi-uts" title="Link to this heading">#</a></h2>
+<ul>
+<li><h5 class="rubric" id="transformasi-matriks">Transformasi Matriks</h5>
+</li>
+</ul>
+<p>Transformasi Matriks yaitu bagaimana matriks dapat digunakan untuk mengubah satu vektor menjadi vektor lainnya.
+Dengan menggunakan matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m\)</span> X <span class="math notranslate nohighlight">\(n\)</span> bisa digunakan untuk mendefinisikan sebuah fungsi <span class="math notranslate nohighlight">\(T\)</span> yang mengambil vektor kolom <span class="math notranslate nohighlight">\(\vec{x}\)</span> adalah vektor kolom berukuran <span class="math notranslate nohighlight">\(n \times 1\)</span> dan menghasilkan vektor kolom <span class="math notranslate nohighlight">\(\vec{y}\)</span> berukuran <span class="math notranslate nohighlight">\(m \times 1\)</span> melalui persamaan:
+$<span class="math notranslate nohighlight">\(
+\vec{y} = T(\vec{x}) = A\vec{x}
+\)</span>$</p>
+<p>Fungsi ini disebut *Transformasi Matriks, dan termasuk dalam kelas umum yang biasanya disebut *<em>Transformasi Linier</em> yaitu fungsi antar vektor</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="perkalian-matriks-vektor">Perkalian Matriks - Vektor</h5>
+</li>
+</ul>
+<p>Agar hasil perkalian tetap berupa vektor  2D <span class="math notranslate nohighlight">\((\ \mathbb{R}^2)\)</span>, maka matriks <span class="math notranslate nohighlight">\(A\)</span> harus berukuran <span class="math notranslate nohighlight">\(2\)</span> X <span class="math notranslate nohighlight">\(2\)</span>.
+Diberikan matriks <span class="math notranslate nohighlight">\(A\)</span> dan tiga vektor <span class="math notranslate nohighlight">\(\vec{x},\ \vec{y},\ \vec{z}\)</span> hasil perkalian antara matriks dan vektor dihitung sebagai berikut:
+$<span class="math notranslate nohighlight">\(
+A = \begin{bmatrix}
+4 &amp; 2 \\
+1 &amp; 3
+\end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix}
+1 \\
+1
+\end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix}
+-1 \\
+1
+\end{bmatrix}, \quad
+\vec{z} = \begin{bmatrix}
+3 \\
+-1
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Solusi:
+\)</span><span class="math notranslate nohighlight">\(
+A\vec{x} = \begin{bmatrix}
+5 \\
+5
+\end{bmatrix}, \quad
+A\vec{y} = \begin{bmatrix}
+-3 \\
+1
+\end{bmatrix}, \quad
+A\vec{z} = \begin{bmatrix}
+-1 \\
+3
+\end{bmatrix}
+\)</span>$</p>
+<p>Perkalian matriks mengubah panjang dan arah vektor dalam contoh di atas vektor <span class="math notranslate nohighlight">\(\vec{x}\)</span> dan <span class="math notranslate nohighlight">\(A\vec{x}\)</span> memiliki arah yang sama tapi panjangnya yang berubah. Namun, <span class="math notranslate nohighlight">\(\vec{y}\)</span> dan <span class="math notranslate nohighlight">\(\vec{z}\)</span> beruubah arah saat dikalikan dengan <span class="math notranslate nohighlight">\(A\)</span>. Hal ini menunjukkan bahwa matriks bertindak secara berbeda terhadap vektor yang berbeda.</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="menggabungkan-penjumlahan-dan-perkalian-matriks">Menggabungkan penjumlahan dan perkalian matriks</h5>
+</li>
+</ul>
+<p>Diketahui:
+$<span class="math notranslate nohighlight">\(
+A = \begin{bmatrix}
+1 &amp; 1 \\
+1 &amp; 2
+\end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix}
+2 \\
+1
+\end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix}
+-1 \\
+1
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Sketsa: \)</span>\vec{x} + \vec{y}<span class="math notranslate nohighlight">\(,\)</span>A\vec{x}<span class="math notranslate nohighlight">\(,\)</span>A\vec{y}<span class="math notranslate nohighlight">\( dan \)</span>A(\vec{x}+\vec{y})$
+langkah ini bertujuan untuk melihat bagaimana penjumlahan vektor berinteraksi dengan transformasi matriks.</p>
+<p>Dihitung:
+$<span class="math notranslate nohighlight">\(
+\vec{x} + \vec{y} = \begin{bmatrix}
+1 \\
+2
+\end{bmatrix}, \quad
+A\vec{x} = \begin{bmatrix}
+3 \\
+4
+\end{bmatrix}, \quad
+A\vec{y} = \begin{bmatrix}
+0 \\
+1
+\end{bmatrix}, \quad
+A(\vec{x} + \vec{y}) = \begin{bmatrix}
+3 \\
+5
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Ini menunjukkan *sifat distributif* dari perkalian matriks terhadap penjumlahan vektor: \)</span><span class="math notranslate nohighlight">\(A(\vec{x} + \vec{y}) = A\vec{x} + A\vec{y}\)</span>$</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="menggambar-efek-dari-perkalian-matriks">Menggambar Efek dari Perkalian matriks</h5>
+</li>
+</ul>
+<p>Diketahui:
+$<span class="math notranslate nohighlight">\(
+A = \begin{bmatrix}
+1 &amp; 1 \\
+-1 &amp; -1
+\end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix}
+1 \\
+1
+\end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix}
+-1 \\
+1
+\end{bmatrix}, \quad
+\vec{z} = \begin{bmatrix}
+4 \\
+4
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Solusi:
+\)</span><span class="math notranslate nohighlight">\(
+A\vec{x} = \begin{bmatrix}
+0 \\
+0
+\end{bmatrix} \quad 
+A\vec{y} = \begin{bmatrix}
+-2 \\
+-2
+\end{bmatrix} \quad
+and \quad
+A\vec{z} = \begin{bmatrix}
+3 \\
+3\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Beberapa vektor seperti \)</span>(\vec{x}<span class="math notranslate nohighlight">\( dan \)</span>\vec{y})$ setelah dikalikan dengan matriks, hasilnya adalah vektor nol sementara vektor lain tetepa berada pada garis tertentu.</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="transformasi-terhadap-bidang-kartesius">Transformasi terhadap bidang kartesius</h5>
+</li>
+</ul>
+<p>Pada bagian ini memeperkenalkan transisi dan menggambarkan vektor satu per satu ke menggambarkan bagaimana seluruh bidang katresius <span class="math notranslate nohighlight">\((\ \mathbb{R}^2)\)</span> berubah oleh matriks.</p>
+<ul>
+<li><h5 class="rubric" id="visualisasi-transformasi-matriks-menggunnakan-vektor">Visualisasi Transformasi Matriks Menggunnakan vektor</h5>
+</li>
+</ul>
+<p>efek transformasi terhadap seluruh bidang Kartesius dengan melihat bagaimana <em>persegi satuan (unit square)</em> berubah.
+Misalkan:
+$<span class="math notranslate nohighlight">\(
+A = \begin{bmatrix}
+1 &amp; 4 \\
+2 &amp; 3
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Titik - titik sudut dari persegi satuan berada di:
+\)</span><span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}, \quad
+\begin{bmatrix}
+1 \\
+0
+\end{bmatrix}, \quad
+\begin{bmatrix}
+1 \\
+1
+\end{bmatrix}, \quad
+\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Setelah dikalikan deng \)</span>A<span class="math notranslate nohighlight">\(, titik - titik tersebut menjadi:
+\)</span><span class="math notranslate nohighlight">\(
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}, \quad
+\begin{bmatrix}
+1 \\
+2
+\end{bmatrix}, \quad
+\begin{bmatrix}
+5 \\
+5
+\end{bmatrix}, \quad
+\begin{bmatrix}
+4 \\
+3
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+ Adapun tips cepat untuk menggunakan matriks kolom: 
+ Buat matriks \)</span>B<span class="math notranslate nohighlight">\( yang kolom - kolomnya adalah titik - titik susdut:
+\)</span><span class="math notranslate nohighlight">\(
+B = \begin{bmatrix}
+0 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 1
+\end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Dikalikan:
+\)</span><span class="math notranslate nohighlight">\(
+AB = \begin{bmatrix}
+0 &amp; 2 &amp; 6 &amp; 4 \\
+0 &amp; 1 &amp; 4 &amp; 3
+\end{bmatrix}
+\)</span>$
+Proses ini cepat jika harus dilakukan transformasi pada banyak titik sekaligus</p>
+<p>Perubahan bentuk dari persegi satuan setelah dikalikan dengan matriks:
+$<span class="math notranslate nohighlight">\(
+A = \begin{bmatrix}
+1 &amp; 4 \\
+2 &amp; 3
+\end{bmatrix}
+\)</span>$</p>
+<ul>
+<li><h5 class="rubric" id="transformasi-matriks-terhadap-sebuah-wilayah">Transformasi Matriks terhadap sebuah wilayah</h5>
+</li>
+</ul>
+<p>Matriks yang digunakan:
+$<span class="math notranslate nohighlight">\(
+A = \begin{bmatrix}
+0 &amp; -1 \\
+1 &amp; 0
+\end{bmatrix}
+\)</span>$
+Matriks ini merupakan rotasi 90 derajat berlawanan arah jarum jam terhadap titik asal (0,0) dalam bidang kartesius.</p>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="id3">Transformasi matriks terhadap sebuah wilayah</h5>
+</li>
+</ul>
+<p>Contoh:
+Diberikan:
+$<span class="math notranslate nohighlight">\(
+A = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Buat matriks \( B \) yang terdiri dari sudut-sudut unit square:
+\)</span><span class="math notranslate nohighlight">\(
+B = \begin{bmatrix} 0 &amp; 1 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 1 \end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Kalikan \( A \) dengan \( B \):
+\)</span><span class="math notranslate nohighlight">\(
+AB = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix} \begin{bmatrix} 0 &amp; 1 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 1 \end{bmatrix} = \begin{bmatrix} 0 &amp; 0 &amp; -1 &amp; -1 \\ 0 &amp; 1 &amp; 1 &amp; 0 \end{bmatrix}
+\)</span>$</p>
+<p>Hasilnya:</p>
+<ul class="simple">
+<li><p>Unit square diputar 90° berlawanan arah jarum jam.</p></li>
+<li><p>Bentuk tetap persegi dengan ukuran yang sama.</p></li>
+</ul>
+<hr class="docutils" />
+<ul>
+<li><h5 class="rubric" id="menentukan-matriks-transformasi-dari-unit-square">Menentukan matriks transformasi dari unit square</h5>
+</li>
+</ul>
+<p>Contoh soal:
+Transformasi memantulkan bidang terhadap sumbu-x lalu meregangkan bidang secara horizontal dengan faktor 2.</p>
+<p>Langkah:</p>
+<ul class="simple">
+<li><p>Vektor <span class="math notranslate nohighlight">\(\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span> berubah menjadi:
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix} 2 \\ 0 \end{bmatrix}
+\)</span>$</p></li>
+<li><p>Vektor <span class="math notranslate nohighlight">\(\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}\)</span> berubah menjadi:
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix} 0 \\ -1 \end{bmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Sehingga matriks transformasinya:
+\)</span><span class="math notranslate nohighlight">\(
+A = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+\)</span>$</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="soal-dan-jawaban">
+<h1>SOAL DAN JAWABAN<a class="headerlink" href="#soal-dan-jawaban" title="Link to this heading">#</a></h1>
+<p>~ Diketahui</p>
+<p><span class="math notranslate nohighlight">\([
+\vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+]\)</span></p>
+<p>-&gt; Nomor 1</p>
+<p><span class="math notranslate nohighlight">\([
+A = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix}
+]\)</span></p>
+<p><span class="math notranslate nohighlight">\([
+A\vec{x} = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+= \begin{bmatrix} 0 \\ 5 \end{bmatrix}
+]\)</span></p>
+<p><span class="math notranslate nohighlight">\([
+A\vec{y} = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix} \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+= \begin{bmatrix} -3 \\ 4 \end{bmatrix}
+]\)</span></p>
+<p>-&gt; Nomor 2</p>
+<p><span class="math notranslate nohighlight">\([
+A = \begin{bmatrix} 2 &amp; 0 \\ 2 &amp; 3 \end{bmatrix}
+]\)</span></p>
+<p><span class="math notranslate nohighlight">\([
+A\vec{x} = \begin{bmatrix} 2 &amp; 0 \\ 2 &amp; 3 \end{bmatrix} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+= \begin{bmatrix} 2 \\ 5 \end{bmatrix}
+]\)</span></p>
+<p><span class="math notranslate nohighlight">\([
+A\vec{y} = \begin{bmatrix} 2 &amp; 0 \\ 2 &amp; 3 \end{bmatrix} \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+= \begin{bmatrix} -2 \\ 4 \end{bmatrix}
+]\)</span></p>
+<p>-&gt; Nomor 5</p>
+<p>Dari gambar diketahui transformasi berikut:</p>
+<p><span class="math notranslate nohighlight">\([
+\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \rightarrow \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad
+\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \rightarrow \begin{bmatrix} 1 \\ 3 \end{bmatrix}
+]\)</span></p>
+<p>Maka matriks transformasinya adalah:</p>
+<p><span class="math notranslate nohighlight">\([
+A = \begin{bmatrix} 1 &amp; 1 \\ 2 &amp; 3 \end{bmatrix}
+]\)</span></p>
+<p>-&gt; Nomor 6</p>
+<p>Dari gambar diketahui transformasi berikut:</p>
+<p><span class="math notranslate nohighlight">\([
+\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \rightarrow \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \rightarrow \begin{bmatrix} -1 \\ 1 \end{bmatrix}
+]\)</span></p>
+<p>Maka matriks transformasinya adalah:</p>
+<p><span class="math notranslate nohighlight">\([
+A = \begin{bmatrix} 1 &amp; -1 \\ 1 &amp; 1 \end{bmatrix}
+]\)</span></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -724,7 +1054,11 @@ x + y + z &amp;= 4 \\
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#devinisi-matriks-invers">Devinisi matriks invers</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-menghitung-invers-matriks">Tugas menghitung invers matriks</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tugas-menghitung-invers-matriks">Tugas menghitung invers matriks</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ringkasan-materi-uts"><em>RINGKASAN MATERI UTS</em></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-dan-jawaban">SOAL DAN JAWABAN</a></li>
 </ul>
 
   </nav></div>
