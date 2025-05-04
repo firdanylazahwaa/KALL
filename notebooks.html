@@ -407,6 +407,7 @@ A = \begin{bmatrix}
 2 &amp; 3
 \end{bmatrix}
 \)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-transformasi-linier">pembuktian transformasi linier</a></li>
 </ul>
 </li>
 </ul>
@@ -976,6 +977,49 @@ A = \begin{bmatrix} 1 &amp; 1 \\ 2 &amp; 3 \end{bmatrix}
 A = \begin{bmatrix} 1 &amp; -1 \\ 1 &amp; 1 \end{bmatrix}
 ]\)</span></p>
 </section>
+<section id="pembuktian-transformasi-linier">
+<h2>pembuktian transformasi linier<a class="headerlink" href="#pembuktian-transformasi-linier" title="Link to this heading">#</a></h2>
+<p>Untuk membuktikan bahwa transformasi <span class="math notranslate nohighlight">\(T(v_1, v_2) = (v_1 + v_2, v_1)\)</span> adalah <strong>transformasi linier</strong>, kita perlu membuktikan dua sifat transformasi linier:</p>
+<p><strong>1. Adanya aditivitas:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
+\]</div>
+<p>Misal:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{v} = (v_1, v_2)\)</span></p></li>
+</ul>
+<p>Maka:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{u} + \mathbf{v} = (u_1 + v_1, u_2 + v_2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = ((u_1 + v_1) + (u_2 + v_2), u_1 + v_1) = (u_1 + u_2 + v_1 + v_2, u_1 + v_1)\)</span></p></li>
+</ul>
+<p>Sementara:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T(\mathbf{u}) = (u_1 + u_2, u_1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T(\mathbf{v}) = (v_1 + v_2, v_1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T(\mathbf{u}) + T(\mathbf{v}) = (u_1 + u_2 + v_1 + v_2, u_1 + v_1)\)</span></p></li>
+</ul>
+<p><strong>2. Adanya homogenitas skalar:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+T(c \mathbf{v}) = c \cdot T(\mathbf{v}), \quad \text{untuk semua } c \in \mathbb{R}
+\]</div>
+<p>Misal:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{v} = (v_1, v_2)\)</span>, maka:</p></li>
+<li><p><span class="math notranslate nohighlight">\(c\mathbf{v} = (cv_1, cv_2)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(T(c\mathbf{v}) = (cv_1 + cv_2, cv_1) = c(v_1 + v_2, v_1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c \cdot T(\mathbf{v}) = c(v_1 + v_2, v_1)\)</span></p></li>
+</ul>
+<p><strong>Kesimpulan:</strong></p>
+<p>Karena kedua syarat transformasi linier terpenuhi, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+T(v_1, v_2) = (v_1 + v_2, v_1) \text{ adalah transformasi linier.}
+\]</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1068,6 +1112,7 @@ A = \begin{bmatrix}
 2 &amp; 3
 \end{bmatrix}
 \)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-transformasi-linier">pembuktian transformasi linier</a></li>
 </ul>
 </li>
 </ul>
