@@ -188,6 +188,9 @@
 
 
 
+
+
+
 </ul>
 
     </div>
@@ -413,6 +416,9 @@ A = \begin{bmatrix}
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi-linier">Transformasi Linier</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi">Refleksi</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#devinisi-eigenvalue-dan-eigenvactor">Devinisi Eigenvalue dan Eigenvactor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalue-dan-eigenvactor">Mencari Eigenvalue dan Eigenvactor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvector-ortonormal-menjadikan-eigenvector-satu-kesatuan">Mencari  Eigenvector ortonormal menjadikan Eigenvector satu kesatuan</a></li>
 </ul>
 
             </nav>
@@ -1290,6 +1296,198 @@ T(v_1, v_2) = (v_1 + v_2, v_1) \text{ adalah transformasi linier.}
 </div>
 </div>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="devinisi-eigenvalue-dan-eigenvactor">
+<h1>Devinisi Eigenvalue dan Eigenvactor<a class="headerlink" href="#devinisi-eigenvalue-dan-eigenvactor" title="Link to this heading">#</a></h1>
+<p>Eigenvalue (nilai eigen) adalah nilai skalar yang dikaitkan dengan vektor eigen saat melakukan transformasi linear pada vektor tersebut. Eigenvector (vektor eigen) adalah vektor non-nol yang tidak mengubah arahnya setelah transformasi linear, melainkan hanya direntang (atau dipampatkan) oleh nilai eigen tersebut.</p>
+<div class="math notranslate nohighlight">
+\[ Av=\lambda v \]</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mencari-eigenvalue-dan-eigenvactor">
+<h1>Mencari Eigenvalue dan Eigenvactor<a class="headerlink" href="#mencari-eigenvalue-dan-eigenvactor" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}
+\end{split}\]</div>
+<p><strong>Langkah 1: Mencari Eigenvalue</strong></p>
+<p>Eigenvalue <span class="math notranslate nohighlight">\(\lambda\)</span> diperoleh dengan menyelesaikan persamaan:</p>
+<div class="math notranslate nohighlight">
+\[
+\det(A - \lambda I) = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A - \lambda I = \begin{bmatrix} 2 - \lambda &amp; 1 \\ 1 &amp; 2 - \lambda \end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\det(A - \lambda I) = (2 - \lambda)^2 - 1 = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+(2 - \lambda)^2 = 1 \Rightarrow 2 - \lambda = \pm1
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\Rightarrow \lambda = 2 \pm 1 \Rightarrow \boxed{\lambda_1 = 1},\quad \boxed{\lambda_2 = 3}
+\]</div>
+<p><strong>Langkah 2: Mencari Eigenvector</strong></p>
+<p>Untuk <span class="math notranslate nohighlight">\(\lambda_1 = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A - \lambda_1 I = \begin{bmatrix} 2 - 1 &amp; 1 \\ 1 &amp; 2 - 1 \end{bmatrix} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Selesaikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+\Rightarrow x + y = 0 \Rightarrow y = -x
+\end{split}\]</div>
+<p>Jadi eigenvectornya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v}_1 = \begin{bmatrix} 1 \\ -1 \end{bmatrix} \text{ atau sebarang kelipatan dari ini}
+\end{split}\]</div>
+<p>Untuk <span class="math notranslate nohighlight">\(\lambda_2 = 3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A - \lambda_2 I = \begin{bmatrix} 2 - 3 &amp; 1 \\ 1 &amp; 2 - 3 \end{bmatrix} = \begin{bmatrix} -1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}
+\end{split}\]</div>
+<p>Selesaikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} -1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+\Rightarrow -x + y = 0 \Rightarrow y = x
+\end{split}\]</div>
+<p>Jadi eigenvectornya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v}_2 = \begin{bmatrix} 1 \\ 1 \end{bmatrix} \text{ atau sebarang kelipatan dari ini}
+\end{split}\]</div>
+<p><strong>Hasil Akhir</strong></p>
+<ul class="simple">
+<li><p>Eigenvalue 1 → Eigenvector <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ -1 \end{bmatrix}\)</span></p></li>
+<li><p>Eigenvalue 3 → Eigenvector <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span></p></li>
+</ul>
+<p><strong>codenya</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues:&quot;</span><span class="p">,</span> <span class="n">eigenvalues</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvectors:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">eigenvectors</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues: [3. 1.]
+Eigenvectors:
+ [[ 0.70710678 -0.70710678]
+ [ 0.70710678  0.70710678]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mencari-eigenvector-ortonormal-menjadikan-eigenvector-satu-kesatuan">
+<h1>Mencari  Eigenvector ortonormal menjadikan Eigenvector satu kesatuan<a class="headerlink" href="#mencari-eigenvector-ortonormal-menjadikan-eigenvector-satu-kesatuan" title="Link to this heading">#</a></h1>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 2 \end{bmatrix}
+\end{split}\]</div>
+<p><strong>Langkah 1: Cari <strong>eigenvalue</strong></strong></p>
+<p>Gunakan determinan dari <span class="math notranslate nohighlight">\(A - \lambda I\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\det \begin{bmatrix}
+2 - \lambda &amp; 1 \\
+1 &amp; 2 - \lambda
+\end{bmatrix}
+= (2 - \lambda)^2 - 1 = 0
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+(2 - \lambda)^2 = 1 \Rightarrow 2 - \lambda = \pm 1
+\Rightarrow \lambda_1 = 1, \lambda_2 = 3
+\]</div>
+<p><strong>Langkah 2: Cari <strong>eigenvector</strong> untuk masing-masing eigenvalue</strong></p>
+<p>Untuk <span class="math notranslate nohighlight">\(\lambda = 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A - I = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1 \end{bmatrix}
+\Rightarrow x + y = 0 \Rightarrow y = -x
+\Rightarrow \vec{v}_1 = \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+\end{split}\]</div>
+<p><strong>Untuk <span class="math notranslate nohighlight">\(\lambda = 3\)</span>:</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A - 3I = \begin{bmatrix} -1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}
+\Rightarrow x - y = 0 \Rightarrow y = x
+\Rightarrow \vec{v}_2 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p><strong><strong>Normalisasi</strong> eigenvector agar panjangnya 1</strong></p>
+<p>Panjang masing-masing vektor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\| \vec{v}_1 \| = \sqrt{1^2 + (-1)^2} = \sqrt{2}
+\quad \Rightarrow \quad
+\hat{v}_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ -1 \end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\| \vec{v}_2 \| = \sqrt{1^2 + 1^2} = \sqrt{2}
+\quad \Rightarrow \quad
+\hat{v}_2 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p><strong>Hasil Akhir: <strong>Eigenvector ortonormal</strong></strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boxed{
+\hat{v}_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ -1 \end{bmatrix}, \quad
+\hat{v}_2 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+}
+\end{split}\]</div>
+<p>Jadi:</p>
+<p>Dua vektor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} \frac{1}{\sqrt{2}} \\ -\frac{1}{\sqrt{2}} \end{bmatrix}
+\quad \text{dan} \quad
+\begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{bmatrix}
+\end{split}\]</div>
+<p>adalah <strong>eigenvector ortonormal</strong> dari matriks <span class="math notranslate nohighlight">\(A\)</span>, dan bisa dijadikan <strong>basis ortonormal</strong> untuk ruang 2D yang ditransformasi oleh <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues:&quot;</span><span class="p">,</span> <span class="n">eigenvalues</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvectors:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">eigenvectors</span><span class="p">)</span>
+
+<span class="c1"># Normalisasi eigenvectors</span>
+<span class="n">normalized_vectors</span> <span class="o">=</span> <span class="n">eigenvectors</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">eigenvectors</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Normalized (Orthonormal) Eigenvectors:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">normalized_vectors</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues: [3. 1.]
+Eigenvectors:
+ [[ 0.70710678 -0.70710678]
+ [ 0.70710678  0.70710678]]
+Normalized (Orthonormal) Eigenvectors:
+ [[ 0.70710678 -0.70710678]
+ [ 0.70710678  0.70710678]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1385,6 +1583,9 @@ A = \begin{bmatrix}
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi-linier">Transformasi Linier</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#refleksi">Refleksi</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#devinisi-eigenvalue-dan-eigenvactor">Devinisi Eigenvalue dan Eigenvactor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalue-dan-eigenvactor">Mencari Eigenvalue dan Eigenvactor</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvector-ortonormal-menjadikan-eigenvector-satu-kesatuan">Mencari  Eigenvector ortonormal menjadikan Eigenvector satu kesatuan</a></li>
 </ul>
 
   </nav></div>
