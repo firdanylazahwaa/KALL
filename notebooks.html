@@ -191,6 +191,7 @@
 
 
 
+
 </ul>
 
     </div>
@@ -419,6 +420,7 @@ A = \begin{bmatrix}
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#devinisi-eigenvalue-dan-eigenvactor">Devinisi Eigenvalue dan Eigenvactor</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalue-dan-eigenvactor">Mencari Eigenvalue dan Eigenvactor</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvector-ortonormal-menjadikan-eigenvector-satu-kesatuan">Mencari  Eigenvector ortonormal menjadikan Eigenvector satu kesatuan</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-titik-dot-product">Perkalian Titik (Dot Product)</a></li>
 </ul>
 
             </nav>
@@ -1488,6 +1490,134 @@ Normalized (Orthonormal) Eigenvectors:
 </div>
 </div>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="perkalian-titik-dot-product">
+<h1>Perkalian Titik (Dot Product)<a class="headerlink" href="#perkalian-titik-dot-product" title="Link to this heading">#</a></h1>
+<p>Perkalian Titik (Dot Product) adalah operasi matematika antara dua vektor yang menghasilkan sebuah skalar (bukan vektor). Operasi ini mencerminkan seberapa besar arah kedua vektor tersebut sejalan satu sama lain.</p>
+<p><strong>contoh</strong></p>
+<ul class="simple">
+<li><p><strong>D</strong>: saya makan nasi</p></li>
+<li><p><strong>E</strong>: saya makan nasi putih dan nasi jagung</p></li>
+<li><p><strong>F</strong>: saya pergi ke pasar</p></li>
+</ul>
+<p><strong>Kosakata unik:</strong>
+saya, makan, nasi, jagung, pasar, pergi, putih, dan, ke</p>
+<p><strong>Representasi Vektor (Term Frequency):</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>saya</p></th>
+<th class="head"><p>makan</p></th>
+<th class="head"><p>nasi</p></th>
+<th class="head"><p>jagung</p></th>
+<th class="head"><p>pasar</p></th>
+<th class="head"><p>pergi</p></th>
+<th class="head"><p>putih</p></th>
+<th class="head"><p>dan</p></th>
+<th class="head"><p>ke</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>D</strong></p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>E</strong></p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>F</strong></p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Dalam bentuk vektor:
+$<span class="math notranslate nohighlight">\(
+\mathbf{D} = (1,1,1,0,0,0,0,0,0)
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\mathbf{E} = (1,1,2,1,0,0,1,1,0)
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\mathbf{F} = (1,0,0,0,1,1,0,0,1)
+\)</span>$</p>
+<hr class="docutils" />
+<p><strong>Dot Product (Perkalian Titik)</strong></p>
+<p><strong>Basis 2D:</strong>
+Terdapat 2 basis:
+$<span class="math notranslate nohighlight">\(
+\mathbf{e_1} = [1, 0], \quad \mathbf{e_2} = [0, 1]
+\)</span>$</p>
+<p>Perkalian titik:
+$<span class="math notranslate nohighlight">\(
+\mathbf{e_1} \cdot \mathbf{e_2} = (1 \cdot 0) + (0 \cdot 1) = 0
+\)</span>$</p>
+<p>Artinya, basis 2D tersebut <strong>tegak lurus</strong>.</p>
+<hr class="docutils" />
+<p><strong>Basis 3D:</strong>
+Terdapat 3 basis:
+$<span class="math notranslate nohighlight">\(
+\mathbf{b_1} = [1, 0, 0], \quad \mathbf{b_2} = [0, 1, 0], \quad \mathbf{b_3} = [0, 0, 1]
+\)</span>$</p>
+<p>Perkalian titik antar basis:
+$<span class="math notranslate nohighlight">\(
+\mathbf{b_1} \cdot \mathbf{b_2} = (1 \cdot 0) + (0 \cdot 1) + (0 \cdot 0) = 0
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\mathbf{b_1} \cdot \mathbf{b_3} = (1 \cdot 0) + (0 \cdot 0) + (0 \cdot 1) = 0
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\mathbf{b_2} \cdot \mathbf{b_3} = (0 \cdot 0) + (1 \cdot 0) + (0 \cdot 1) = 0
+\)</span>$</p>
+<p>Artinya, ketiga basis tersebut <strong>saling tegak lurus</strong> karena dot product-nya 0.</p>
+<hr class="docutils" />
+<p><strong>Contoh Tambahan:</strong></p>
+<p><strong>Contoh 1:</strong>
+$<span class="math notranslate nohighlight">\(
+\mathbf{B} = [2, 1], \quad \mathbf{C} = [-1, 2]
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\mathbf{B} \cdot \mathbf{C} = (2 \cdot -1) + (1 \cdot 2) = -2 + 2 = 0
+\)</span>$
+→ Vektor <strong>tegak lurus</strong></p>
+<p><strong>Contoh 2:</strong>
+$<span class="math notranslate nohighlight">\(
+\mathbf{u} = (2, 1), \quad \mathbf{v} = (-2, 4)
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\mathbf{u} \cdot \mathbf{v} = (2 \cdot -2) + (1 \cdot 4) = -4 + 4 = 0
+\)</span>$
+→ Vektor <strong>tegak lurus</strong></p>
+<p><strong>Kesimpulan:</strong></p>
+<ul class="simple">
+<li><p><strong>Dot product</strong> antara dua vektor = 0 berarti <strong>tegak lurus (sudut 90°)</strong>.</p></li>
+<li><p>Dot product menghasilkan <strong>skalar</strong>, bukan vektor.</p></li>
+<li><p>Arah vektor lebih penting daripada panjang dalam konteks ini.</p></li>
+<li><p>Dot product tetap <strong>konsisten walau vektor diperpanjang</strong> karena hanya sudut yang dihitung.</p></li>
+</ul>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1586,6 +1716,7 @@ A = \begin{bmatrix}
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#devinisi-eigenvalue-dan-eigenvactor">Devinisi Eigenvalue dan Eigenvactor</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalue-dan-eigenvactor">Mencari Eigenvalue dan Eigenvactor</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvector-ortonormal-menjadikan-eigenvector-satu-kesatuan">Mencari  Eigenvector ortonormal menjadikan Eigenvector satu kesatuan</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-titik-dot-product">Perkalian Titik (Dot Product)</a></li>
 </ul>
 
   </nav></div>
