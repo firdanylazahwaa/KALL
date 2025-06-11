@@ -192,6 +192,7 @@
 
 
 
+
 </ul>
 
     </div>
@@ -421,6 +422,10 @@ A = \begin{bmatrix}
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalue-dan-eigenvactor">Mencari Eigenvalue dan Eigenvactor</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvector-ortonormal-menjadikan-eigenvector-satu-kesatuan">Mencari  Eigenvector ortonormal menjadikan Eigenvector satu kesatuan</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-titik-dot-product">Perkalian Titik (Dot Product)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-silang-cross-product">Perkalian Silang (Cross Product)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-soal"><strong>Penyelesaian Soal</strong></a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -1622,6 +1627,141 @@ $<span class="math notranslate nohighlight">\(
 <li><p>Dot product tetap <strong>konsisten walau vektor diperpanjang</strong> karena hanya sudut yang dihitung.</p></li>
 </ul>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="perkalian-silang-cross-product">
+<h1>Perkalian Silang (Cross Product)<a class="headerlink" href="#perkalian-silang-cross-product" title="Link to this heading">#</a></h1>
+<p><strong>Definisi Perkalian Silang</strong>
+Perkalian silang dari dua vektor <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span> di <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span> menghasilkan vektor baru yang tegak lurus terhadap kedua vektor tersebut. Jika:
+$<span class="math notranslate nohighlight">\(
+\vec{u} = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix}, \quad \vec{v} = \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix},
+\)</span><span class="math notranslate nohighlight">\(
+maka hasil kali silangnya adalah:
+\)</span><span class="math notranslate nohighlight">\(
+\vec{u} \times \vec{v} = \begin{bmatrix} u_2 v_3 - u_3 v_2 \\ -(u_1 v_3 - u_3 v_1) \\ u_1 v_2 - u_2 v_1 \end{bmatrix}.
+\)</span>$</p>
+<p><strong>Contoh Menghitung Hasil Kali Silang</strong></p>
+<p><strong>Diberikan:</strong>
+$<span class="math notranslate nohighlight">\(
+\vec{u} = \begin{bmatrix} 2 \\ -1 \\ 4 \end{bmatrix}, \quad \vec{v} = \begin{bmatrix} 3 \\ 2 \\ 5 \end{bmatrix}
+\)</span>$</p>
+<p><strong>Hitung <span class="math notranslate nohighlight">\(\vec{u} \times \vec{v}\)</span>:</strong></p>
+<p>Menggunakan definisi perkalian silang:
+$<span class="math notranslate nohighlight">\(
+\vec{u} \times \vec{v} = \begin{bmatrix} 
+u_2v_3 - u_3v_2 \\ 
+-(u_1v_3 - u_3v_1) \\ 
+u_1v_2 - u_2v_1 
+\end{bmatrix} = \begin{bmatrix} 
+(-1)(5) - (4)(2) \\ 
+-((2)(5) - (4)(3)) \\ 
+(2)(2) - (-1)(3) 
+\end{bmatrix} = \begin{bmatrix} 
+-13 \\ 
+2 \\ 
+7 
+\end{bmatrix}
+\)</span>$</p>
+<p><strong>Verifikasi ortogonalitas:</strong></p>
+<ol class="arabic simple">
+<li><p>Perkalian titik dengan <span class="math notranslate nohighlight">\(\vec{u}\)</span>:
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix} -13 \\ 2 \\ 7 \end{bmatrix} \cdot \begin{bmatrix} 2 \\ -1 \\ 4 \end{bmatrix} = (-13)(2) + (2)(-1) + (7)(4) = -26 - 2 + 28 = 0
+\)</span>$</p></li>
+<li><p>Perkalian titik dengan <span class="math notranslate nohighlight">\(\vec{v}\)</span>:
+$<span class="math notranslate nohighlight">\(
+\begin{bmatrix} -13 \\ 2 \\ 7 \end{bmatrix} \cdot \begin{bmatrix} 3 \\ 2 \\ 5 \end{bmatrix} = (-13)(3) + (2)(2) + (7)(5) = -39 + 4 + 35 = 0
+\)</span>$</p></li>
+</ol>
+<p><strong>Sifat-Sifat Perkalian Silang</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Antikomutatif</strong>: <span class="math notranslate nohighlight">\(\vec{u} \times \vec{v} = -(\vec{v} \times \vec{u})\)</span>.</p></li>
+<li><p><strong>Distributif</strong>: <span class="math notranslate nohighlight">\((\vec{u} + \vec{v}) \times \vec{w} = \vec{u} \times \vec{w} + \vec{v} \times \vec{w}\)</span>.</p></li>
+<li><p><strong>Ortogonalitas</strong>: <span class="math notranslate nohighlight">\((\vec{u} \times \vec{v}) \cdot \vec{u} = 0\)</span> dan <span class="math notranslate nohighlight">\((\vec{u} \times \vec{v}) \cdot \vec{v} = 0\)</span>.</p></li>
+<li><p><strong>Hasil kali dengan diri sendiri</strong>: <span class="math notranslate nohighlight">\(\vec{u} \times \vec{u} = \vec{0}\)</span>.</p></li>
+<li><p><strong>Hubungan dengan sudut</strong>: <span class="math notranslate nohighlight">\(\|\vec{u} \times \vec{v}\| = \|\vec{u}\| \|\vec{v}\| \sin(\theta)\)</span>.</p></li>
+</ol>
+<p><strong>Aplikasi Perkalian Silang</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Luas Jajaran Genjang</strong>: Luas jajaran genjang yang dibentuk oleh <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span> adalah <span class="math notranslate nohighlight">\(\|\vec{u} \times \vec{v}\|\)</span>.</p></li>
+<li><p><strong>Luas Segitiga</strong>: Luas segitiga yang dibentuk oleh <span class="math notranslate nohighlight">\(\vec{u}\)</span> dan <span class="math notranslate nohighlight">\(\vec{v}\)</span> adalah <span class="math notranslate nohighlight">\(\frac{1}{2} \|\vec{u} \times \vec{v}\|\)</span>.</p></li>
+<li><p><strong>Volume Paralelepiped</strong>: Volume paralelepiped yang dibentuk oleh <span class="math notranslate nohighlight">\(\vec{u}, \vec{v}, \vec{w}\)</span> adalah <span class="math notranslate nohighlight">\(|\vec{u} \cdot (\vec{v} \times \vec{w})|\)</span>.</p></li>
+</ol>
+<hr class="docutils" />
+<section id="penyelesaian-soal">
+<h2><strong>Penyelesaian Soal</strong><a class="headerlink" href="#penyelesaian-soal" title="Link to this heading">#</a></h2>
+<p><strong>1. Tentukan luas jajar genjang dari</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} = \begin{bmatrix}1 \\ 2\end{bmatrix},\quad \vec{v} = \begin{bmatrix}2 \\ 1\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+L = \left| \det \begin{bmatrix} u_1 &amp; v_1 \\ u_2 &amp; v_2 \end{bmatrix} \right|
+= \left| \det \begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 1 \end{bmatrix} \right|
+= |(1)(1) - (2)(2)| = |1 - 4| = |-3| = \boxed{3}
+\end{split}\]</div>
+<iframe src="https://www.geogebra.org/classic/wezdktjd" width="800" height="600" style="border:0;"></iframe>
+<hr class="docutils" />
+<p><strong>2. Tentukan luas jajar genjang dari</strong></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} = \begin{bmatrix}2 \\ 0\end{bmatrix},\quad
+\vec{v} = \begin{bmatrix}0 \\ 3\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+L = \left| \det \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 3 \end{bmatrix} \right|
+= |(2)(3) - (0)(0)| = |6 - 0| = \boxed{6}
+\end{split}\]</div>
+<iframe src="https://www.geogebra.org/classic/gsft6a9a" width="800" height="600" style="border:0;"></iframe>
+<hr class="docutils" />
+<p><strong>3. Luas segitiga dari titik (0,0,0), (1,3,-1), dan (2,1,1)</strong></p>
+<p>Vektor:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{AB} = (1, 3, -1), \quad \vec{AC} = (2, 1, 1)
+\]</div>
+<p>Perkalian silang:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{AB} \times \vec{AC} = 
+\begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+1 &amp; 3 &amp; -1 \\
+2 &amp; 1 &amp; 1 \\
+\end{vmatrix}
+= 4\mathbf{i} - 3\mathbf{j} - 5\mathbf{k}
+\end{split}\]</div>
+<p>Panjang vektor hasil:</p>
+<div class="math notranslate nohighlight">
+\[
+|\vec{AB} \times \vec{AC}| = \sqrt{4^2 + (-3)^2 + (-5)^2} = \sqrt{50}
+\]</div>
+<p>Luas segitiga:</p>
+<div class="math notranslate nohighlight">
+\[
+L = \frac{1}{2} \cdot \sqrt{50} = \frac{5\sqrt{2}}{1}
+\]</div>
+<iframe src="https://www.geogebra.org/classic/yr24ahjx" width="800" height="600" style="border:0;"></iframe>
+<hr class="docutils" />
+<p><strong>4. Luas segitiga dari titik (5,2,-1), (3,6,2), dan (1,0,4)</strong></p>
+<p>Given points:
+$<span class="math notranslate nohighlight">\( A = (5, 2, -1), \quad B = (3, 6, 2), \quad C = (1, 0, 4) \)</span>$</p>
+<p>Vectors:
+$<span class="math notranslate nohighlight">\( \overrightarrow{AB} = (-2, 4, 3), \quad \overrightarrow{AC} = (-4, -2, 5) \)</span>$</p>
+<p>Cross product:
+$<span class="math notranslate nohighlight">\( \overrightarrow{AB} \times \overrightarrow{AC} = 
+\begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+-2 &amp; 4 &amp; 3 \\
+-4 &amp; -2 &amp; 5
+\end{vmatrix} = (26)\mathbf{i} - (-2)\mathbf{j} + (20)\mathbf{k} \)</span>$</p>
+<p>Magnitude:
+$<span class="math notranslate nohighlight">\( \left\| \overrightarrow{AB} \times \overrightarrow{AC} \right\| = \sqrt{26^2 + (-2)^2 + 20^2} = \sqrt{676 + 4 + 400} = \sqrt{1080} \)</span>$</p>
+<p>Area of triangle:
+$<span class="math notranslate nohighlight">\( L = \frac{1}{2} \times \sqrt{1080} = \frac{1}{2} \times \sqrt{36 \times 30} = \frac{6\sqrt{30}}{2} = \boxed{3\sqrt{30}} \)</span>$</p>
+<iframe src="https://www.geogebra.org/classic/pq7mbhec" width="800" height="600" style="border:0;"></iframe>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1721,6 +1861,10 @@ A = \begin{bmatrix}
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvalue-dan-eigenvactor">Mencari Eigenvalue dan Eigenvactor</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-eigenvector-ortonormal-menjadikan-eigenvector-satu-kesatuan">Mencari  Eigenvector ortonormal menjadikan Eigenvector satu kesatuan</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-titik-dot-product">Perkalian Titik (Dot Product)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-silang-cross-product">Perkalian Silang (Cross Product)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-soal"><strong>Penyelesaian Soal</strong></a></li>
+</ul>
+</li>
 </ul>
 
   </nav></div>
